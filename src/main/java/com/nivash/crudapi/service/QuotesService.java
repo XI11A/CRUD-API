@@ -44,7 +44,6 @@ public class QuotesService {
 
     public Optional<Quotes> randomQuote() {
         List<Quotes> quotes = new ArrayList<>();
-        System.out.println(getQuotesCount());
         return quotesRepo.findById(String.valueOf((int)Math.floor(Math.random()*getQuotesCount())+1));
     }
 }

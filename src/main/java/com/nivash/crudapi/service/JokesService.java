@@ -42,7 +42,6 @@ public class JokesService {
 
     public Optional<Jokes> randomJoke() {
         List<Jokes> jokes = new ArrayList<>();
-        System.out.println(getJokesCount());
         return jokesRepo.findById(String.valueOf((int)Math.floor(Math.random()*getJokesCount())+1));
     }
 }
